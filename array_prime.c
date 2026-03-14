@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,j,a[50],num;
+	printf("Enter Limit :");
+	scanf("%d",&n);
+	for(i=0; i<n; i++)
+	{
+		printf("Enter Element :");
+		scanf("%d",&a[i]);
+	}
+	for(i=0; i<n; i++)
+	{
+		num=a[i];
+		for(j=2; j<num; j++)
+		{
+			if(num%j==0)
+			break;
+		}
+		if(j==num)
+		  printf("%d\t",a[i]);
+	}
+}
